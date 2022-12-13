@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+<Page Caption="Параметры"/>
+<Group Caption="Устройство">
+	<Parameters Name="Model" Caption="Модель" TypeValue="Number" DefaultValue="500">
+	<Parameters/>
+</Parameters>
+</Group>
+</Settings>
