@@ -1,5 +1,5 @@
 #pragma once
-#include "Items.h"
+#include "items.h"
 
 ItemsValues::ItemsValues()
 {
@@ -19,6 +19,7 @@ ItemsValues::ItemsValues()
 	for (size_t i{ 1 }; i <= 256; ++i)
 		comFileList.push_back({ i, "COM" + i });
 
+	baudRateList.reserve(11);
 	baudRateList.push_back({ 1200, "1200 бод" });
 	baudRateList.push_back({ 2400, "2400 бод" });
 	baudRateList.push_back({ 2400, "2400 бод" });
@@ -31,6 +32,7 @@ ItemsValues::ItemsValues()
 	baudRateList.push_back({ 460800, "460800 бод" });
 	baudRateList.push_back({ 921600, "921600 бод" });
 
+	ofdChannelList.reserve(2);
 	ofdChannelList.push_back({ 0, "Нет" });
 	ofdChannelList.push_back({ 2, "Автоматически" });
 }

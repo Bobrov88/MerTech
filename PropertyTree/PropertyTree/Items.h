@@ -1,11 +1,10 @@
 #pragma once
-#include <iostream>
-#include <vector>
-#include <numeric>
+#include "includes.h"
 
 typedef std::vector<std::pair<size_t, std::string>> ItemList;
 
 class ItemsValues {
+public:
 	ItemList modelList;
 	ItemList portList;
 	ItemList comFileList;
