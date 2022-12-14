@@ -12,12 +12,8 @@ ItemsValues::ItemsValues()
 	portList.push_back({ 2, "TCP/IP" });
 
 	comFileList.reserve(256);
-	//std::iota(
-	//	comFileList.begin(),
-	//	comFileList.end(),
-	//	1);
-	for (size_t i{ 1 }; i <= 256; ++i)
-		comFileList.push_back({ i, "COM" + i });
+	for (int i{ 1 }; i <= 256; ++i)
+		comFileList.push_back({ i, "COM" + std::to_string(i)});
 
 	baudRateList.reserve(11);
 	baudRateList.push_back({ 1200, "1200 бод" });
