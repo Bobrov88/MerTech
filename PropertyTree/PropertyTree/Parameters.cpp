@@ -5,7 +5,7 @@ ParameterValues::ParameterValues() {
 	model.push_back("Model");
 	model.push_back("Модель");
 	model.push_back("Number");
-	model.push_back("5005");
+	model.push_back("500");
 
 	userPassword.push_back("UserPassword");
 	userPassword.push_back("Пароль пользователя по умолчанию");
