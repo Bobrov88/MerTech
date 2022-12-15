@@ -15,11 +15,11 @@ XMLWriter::XMLWriter()
 	XMLWriter::putXMLParameters(pValues.model, paramModel);
 	XMLWriter::putXMLParameters(pValues.userPassword, paramUserPassword);
 	XMLWriter::putXMLParameters(pValues.port, paramPort);
-	XMLWriter::putXMLParameters(pValues.port, paramComFile);
+	XMLWriter::putXMLParameters(pValues.comFile, paramComFile);
 	XMLWriter::putXMLParameters(pValues.baudRate, paramBaudRate);
 	XMLWriter::putXMLParameters(pValues.IPAddress, paramIPAddress);
-	XMLWriter::putXMLParameters(pValues.IPAddress, paramIPPort);
-	XMLWriter::putXMLParameters(pValues.IPAddress, paramOfdChannel);
+	XMLWriter::putXMLParameters(pValues.IPPort, paramIPPort);
+	XMLWriter::putXMLParameters(pValues.ofdChannel, paramOfdChannel);
 }
 
 XMLWriter::~XMLWriter() {}
@@ -35,9 +35,8 @@ void XMLWriter::putXMLItems(const ItemList& il, pt& node)
 
 void XMLWriter::putXMLParameters(const ParamList& pl, pt& node)
 {
-	auto& _node = node.add("Parameter", "");
-	if (!pl[0].empty()) _node.put("<xmlattr>.Name", pl[0]);
-	if (!pl[1].empty())	_node.put("<xmlattr>.Caption", pl[1]);
-	if (!pl[2].empty())	_node.put("<xmlattr>.TypeValue", pl[2]);
-	if (!pl[3].empty())	_node.put("<xmlattr>.DefaultValue", pl[3]);
+	if (!pl[0].empty()) node.put("<xmlattr>.Name", pl[0]);
+	if (!pl[1].empty())	node.put("<xmlattr>.Caption", pl[1]);
+	if (!pl[2].empty())	node.put("<xmlattr>.TypeValue", pl[2]);
+	if (!pl[3].empty())	node.put("<xmlattr>.DefaultValue", pl[3]);
 }

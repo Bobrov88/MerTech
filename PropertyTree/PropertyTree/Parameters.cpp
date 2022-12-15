@@ -17,7 +17,7 @@ ParameterValues::ParameterValues() {
 	port.push_back("Number");
 	port.push_back("0");
 
-	comFile.push_back("comFile");
+	comFile.push_back("ComFile");
 	comFile.push_back("Порт");
 	comFile.push_back("Number");
 	comFile.push_back("1");

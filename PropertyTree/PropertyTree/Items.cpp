@@ -18,8 +18,8 @@ ItemsValues::ItemsValues()
 	baudRateList.reserve(11);
 	baudRateList.push_back({ 1200, "1200 бод" });
 	baudRateList.push_back({ 2400, "2400 бод" });
-	baudRateList.push_back({ 2400, "2400 бод" });
-	baudRateList.push_back({ 2400, "2400 бод" });
+	baudRateList.push_back({ 4800, "4800 бод" });
+	baudRateList.push_back({ 9600, "9600 бод" });
 	baudRateList.push_back({ 19200, "19200 бод" });
 	baudRateList.push_back({ 38400, "38400 бод" });
 	baudRateList.push_back({ 57600, "57600 бод" });
