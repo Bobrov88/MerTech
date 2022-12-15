@@ -1,6 +1,29 @@
 #pragma once
 #include "XMLWriter.h"
 
+XMLWriter::XMLWriter()
+{
+	ItemsValues iValues;
+	ParameterValues pValues;
+
+	XMLWriter::putXMLItems(iValues.modelList, choiceModel);
+	XMLWriter::putXMLItems(iValues.portList, choicePort);
+	XMLWriter::putXMLItems(iValues.comFileList, choiceComFile);
+	XMLWriter::putXMLItems(iValues.baudRateList, choiceBaudRate);
+	XMLWriter::putXMLItems(iValues.ofdChannelList, choiceOfdChannel);
+
+	XMLWriter::putXMLParameters(pValues.model, paramModel);
+	XMLWriter::putXMLParameters(pValues.userPassword, paramUserPassword);
+	XMLWriter::putXMLParameters(pValues.port, paramPort);
+	XMLWriter::putXMLParameters(pValues.port, paramComFile);
+	XMLWriter::putXMLParameters(pValues.baudRate, paramBaudRate);
+	XMLWriter::putXMLParameters(pValues.IPAddress, paramIPAddress);
+	XMLWriter::putXMLParameters(pValues.IPAddress, paramIPPort);
+	XMLWriter::putXMLParameters(pValues.IPAddress, paramOfdChannel);
+}
+
+XMLWriter::~XMLWriter() {}
+
 void XMLWriter::putXMLItems(const ItemList& il, pt& node)
 {
 	node = node.put("ChoiceList", "");
